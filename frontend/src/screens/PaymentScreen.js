@@ -11,7 +11,7 @@ const paymentType = [
     },
     {   id:'Stripe',
         value: 'Stripe',
-        img: '../images/stripe.png'
+        img: '../images/Stripe.png'
     },
     
     {   id:'ApplePay',
