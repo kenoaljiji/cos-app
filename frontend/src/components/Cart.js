@@ -1,7 +1,10 @@
-import React, { useContext} from 'react';
+import React, { useContext, useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalState';
+import formatCurrency from '../util';
+
 const Cart = () => {
+
 
     const { cartItems,removeItemFromCart,cartActive,userInfo } = useContext(GlobalContext)
     
@@ -10,9 +13,9 @@ const Cart = () => {
     }
 
     
-    const qty = cartItems.reduce((acc, item) => acc + (item.newPrice || item.price), 0)
+    const totalPrice = cartItems.reduce((acc, item) => acc + (item.discountPrice || item.price) * item.count, 0) 
 
-    const taxPrice =  addDecimals(Number((0.01 * qty)))
+    const taxPrice =  addDecimals(Number((0.01 * totalPrice)))
 
     const location = useLocation();
 
@@ -30,7 +33,8 @@ const Cart = () => {
                 </div>
                 <div className="cart-items__details">
                         <h3>{item.name}</h3>
-                        <p>€{item.newPrice ? item.newPrice : item.price} x 1 </p>
+                        <p>{formatCurrency(item.discountPrice ? item.discountPrice : item.price)} x {item.count}{" "}</p>
+                        
                        
                 </div>
                     {location.pathname !== '/checkout' ? (<p style={{cursor: 'pointer', fontWeight: '400'}} onClick={() => removeItemFromCart(item._id)}>x</p>) : null}
@@ -44,7 +48,7 @@ const Cart = () => {
             <div className='cart-total'>
                         <div className='cart-total__price'>
                             <p>subtotal</p>
-                            <span>€{qty}</span>
+                             <span>€{totalPrice}</span>
                         </div>
                         <div className='cart-total__price mt-1'>
                             <p>Taxes</p>
@@ -54,7 +58,7 @@ const Cart = () => {
             </div>
             <div className='cart-pay'>
                             <h3>Total</h3>
-                <h3>€{Number(qty) + Number(taxPrice)}</h3>
+                <h3>€{Number(totalPrice) + Number(taxPrice)}</h3>
             </div>
 
             {cartItems.length !== 0 ? ( < Link to={userInfo ? '/checkout' : '/login'}>

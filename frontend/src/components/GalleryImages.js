@@ -17,11 +17,7 @@ const GalleryImages = ({ product }) => {
                         ))}
                 </div>
             </div>
-           
-            
-                
-               
-         
+                    
         </>
     )
 }

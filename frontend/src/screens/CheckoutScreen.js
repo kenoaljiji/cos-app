@@ -15,7 +15,7 @@ const CheckoutScreen = () => {
         <div className='checkout'>
             <div className="p-5">
                 <div className='checkout-order'>
-                    <div className="checkout-logo">
+                        <div className="checkout-logo">
                         <img src={logo} alt="Cos" />
                         </div>
                         
@@ -30,8 +30,6 @@ const CheckoutScreen = () => {
                         </Router>
                     </div>
             </div>
-            
-            
 
             <Cart/>
             

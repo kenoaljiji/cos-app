@@ -44,16 +44,19 @@ export default (state, action) => {
             case 'ADD_TO_CART':
             const item = action.payload
 
+            console.log(item)
+
             return {
                 ...state,
                 cartActive: true,
-                cartItems: [...state.cartItems, item],
+                cartItems: action.payload,
             }
             case 'REMOVE_ITEM_FROM_CART':
                 return {
                     ...state,
                     cartItems: state.cartItems.filter((x) => x._id !== action.payload),
-                }
+            }
+          
             case 'ADD_ADDRESS':
                 return {
                     ...state,

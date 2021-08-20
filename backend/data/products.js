@@ -15,7 +15,7 @@ const products = [
     images: ['/images/women-2.png'],
     category: 'women',
     price: 135,
-    newPrice: 99,
+    discountPrice: 99,
     description:'fade-left'
     
   },
@@ -41,7 +41,7 @@ const products = [
     images: ['/images/women-1.png'],
     category: 'women',
     price: 135,
-    newPrice: 99,
+    discountPrice: 99,
     description:'fade-up',
     
   },

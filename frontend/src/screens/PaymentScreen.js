@@ -36,7 +36,6 @@ const PaymentScreen = () => {
         e.preventDefault()
         addPaymentMethod(paymentMethod)
         history.push('/checkout/payment/confirm')
-        
     }
     return (
         <div className='payment'>
@@ -52,9 +51,9 @@ const PaymentScreen = () => {
                             id={item.id}
                             name='paymentMethod'
                             value={item.value}
-                            onChange={(e) => setPaymentMethod(e.target.value)} defaultChecked={index === 0} />
+                            onChange={(e) => setPaymentMethod(e.target.value)} defaultChecked={index === 0}/>
                         <label htmlFor={item.id}>
-                            <img src={item.img} alt={item.value} />
+                            <img src={item.img} alt={item.value}/>
                         </label>
                     </div>
                 ))}

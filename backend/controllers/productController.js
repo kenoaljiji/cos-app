@@ -61,7 +61,7 @@ const createProduct = asyncHandler(async (req, res) => {
       category: req.body.category,
       description: req.body.description,
       price: req.body.price,
-      newPrice: req.body.price
+      discountPrice: req.body.discountPrice
     })
   
     const createdProduct = await product.save()
@@ -79,7 +79,7 @@ const createProduct = asyncHandler(async (req, res) => {
       category,
       description,
       price,
-      newPrice
+      discountPrice
     } = req.body
   
     const product = await Product.findById(req.params.id)
@@ -90,7 +90,7 @@ const createProduct = asyncHandler(async (req, res) => {
       product.category = category
       product.description = description
       product.price = price
-      product.newPrice = newPrice
+      product.discountPrice = discountPrice
   
       const updatedProduct = await product.save()
       res.json(updatedProduct)

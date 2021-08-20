@@ -8,6 +8,7 @@ const listProductsFromStorage = localStorage.getItem('products') ? JSON.parse(lo
 const productFromStorage = localStorage.getItem('product') ? JSON.parse(localStorage.getItem('product')) : []
 const shippingAddressFromStorage = localStorage.getItem('shippingAddress') ? JSON.parse(localStorage.getItem('shippingAddress')) : {}
 const paymentMethodFromStorage = localStorage.getItem('paymentMethod') ? JSON.parse(localStorage.getItem('paymentMethod')) : ''
+const userInfoFromStorage = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
   const cartItemsFromStorage = localStorage.getItem('cartItems')
   ? JSON.parse(localStorage.getItem('cartItems'))
   : []
@@ -21,7 +22,7 @@ const initialState = {
   shippingAddress: shippingAddressFromStorage,
   paymentMethod: paymentMethodFromStorage,
   cartActive: false,
-  userInfo: null
+  userInfo: userInfoFromStorage
 }
 
 
@@ -37,13 +38,13 @@ export const GlobalProvider = ({ children }) => {
   // Initialize Local Storage 
   
   useEffect(() => {
-    /* 
-    localStorage.setItem('products', JSON.stringify(state.products)) */
+    
     localStorage.setItem('products', JSON.stringify(state.products))
     localStorage.setItem('product', JSON.stringify(state.product))
     localStorage.setItem('cartItems', JSON.stringify(state.cartItems))
     localStorage.setItem('shippingAddress', JSON.stringify(state.shippingAddress))
     localStorage.setItem('paymentMethod', JSON.stringify(state.paymentMethod))
+    localStorage.setItem('userInfo', JSON.stringify(state.userInfo))
     
   
   }, [state.cartItems,state.product,state.shippingAddress,state.paymentMethod])
@@ -87,7 +88,6 @@ export const GlobalProvider = ({ children }) => {
       payload: data,
     });
 
-     localStorage.setItem("userInfo", JSON.stringify(data));
       
   } catch (error) {
     dispatch({
@@ -108,7 +108,7 @@ export const GlobalProvider = ({ children }) => {
      localStorage.removeItem("userInfo");
   }
   
-  const addProduct = async (product) => {
+  const getProductDetails = async (product) => {
     
     
 
@@ -126,6 +126,7 @@ export const GlobalProvider = ({ children }) => {
           type: 'PRODUCT_DETAILS',
           payload: res.data
         })
+      
       } catch {
       
         dispatch({
@@ -134,19 +135,28 @@ export const GlobalProvider = ({ children }) => {
           })
           }
 
-
-
   }
 
    // Add product To Cart Item
-
+  
   const addToCart = (product) => {
 
+    const cartItems = state.cartItems
+    
+    let alreadyExists = false;
+    cartItems.map((x) => {
+    if (x._id === product._id) {
+      alreadyExists = true;
+      x.count++;
+    }
+  });
+  if (!alreadyExists) {
+    cartItems.push({ ...product, count: 1 });
+  }
     dispatch({
       type: 'ADD_TO_CART',
-      payload: product
+      payload: cartItems
     })
-
   }
 
   const removeItemFromCart = (id) => {
@@ -194,7 +204,7 @@ export const GlobalProvider = ({ children }) => {
           listProducts,
           setLoading,
           addAddress,
-          addProduct,
+          getProductDetails,
           addToCart,
           addPaymentMethod,
           removeItemFromCart,

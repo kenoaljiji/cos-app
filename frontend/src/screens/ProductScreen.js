@@ -10,14 +10,16 @@ const ProductScreen = ({ match }) => {
     
     const { product,
         addToCart,
-        addProduct,
+        getProductDetails,
         cartItems,
         products,
         loading} = useContext(GlobalContext);
 
     const prod = products.filter(p => p._id !== match.params.id)
 
-    const existItem = cartItems.find(x => x._id === product._id);
+    /* const existItem = cartItems.find(x => x._id === product._id); */
+
+
     
     useEffect(() => {
         
@@ -33,12 +35,8 @@ const ProductScreen = ({ match }) => {
 
 
     const addToCartHandeler = (product) => {
-        
-        if (existItem) {
-            alert('You have already added this item')
-        } else {
+   
              addToCart(product)
-        }
        
     }
 
@@ -52,9 +50,9 @@ const ProductScreen = ({ match }) => {
                 <GalleryImages product={product} key={product._id}/>
                 <div>
                         <h3 className=''>{product.name}</h3>
-                        <p className='mt-1 mb-4'><span style={ {color:'#e01a1a'}}>{product.newPrice ? `€${product.newPrice}` : null} </span>
-                                <span style={product.newPrice ? { textDecoration: 'line-through'} : null}>€{product.price}</span>
-                                </p>
+                        <p className='mt-1 mb-4'><span style={ {color:'#e01a1a'}}>{product.discountPrice ? `€${product.discountPrice}` : null} </span>
+                            <span style={product.discountPrice ? { textDecoration: 'line-through'} : null}>€{product.price}</span>
+                        </p>
 
                 </div>
 
@@ -93,12 +91,12 @@ const ProductScreen = ({ match }) => {
                  <p>You may also like</p>
                     {prod.map((p, index) => (
                             
-                    <Link to={`/product/${p._id}`} key={index} onClick={() => addProduct(p)}>
+                    <Link to={`/product/${p._id}`} key={index} onClick={() => getProductDetails(p)}>
                         <div className='product mb-1' data-aos={p.animation}>
                             <img src={p.images[0]} alt="" />
                        <p className='mt-2'>{p.name}</p>
-                        <p className='mt-1'><span>{p.newPrice ? `€${p.newPrice}` : null} </span>
-                            <span style={p.newPrice ? { textDecoration: 'line-through' } : null}>€{p.price}</span>
+                        <p className='mt-1'><span>{p.discountPrice ? `€${p.discountPrice}` : null} </span>
+                            <span style={p.discountPrice ? { textDecoration: 'line-through' } : null}>€{p.price}</span>
                         </p>
                         </div>
 
