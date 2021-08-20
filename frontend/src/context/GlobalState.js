@@ -47,7 +47,7 @@ export const GlobalProvider = ({ children }) => {
     localStorage.setItem('userInfo', JSON.stringify(state.userInfo))
     
   
-  }, [state.cartItems,state.product,state.shippingAddress,state.paymentMethod])
+  }, [state.cartItems,state.product,state.shippingAddress,state.paymentMethod,state.userInfo])
 
   // Actions
 

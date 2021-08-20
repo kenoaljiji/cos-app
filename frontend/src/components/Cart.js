@@ -1,5 +1,5 @@
 import React, { useContext, useState} from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalState';
 import formatCurrency from '../util';
 
@@ -18,6 +18,14 @@ const Cart = () => {
     const taxPrice =  addDecimals(Number((0.01 * totalPrice)))
 
     const location = useLocation();
+
+    const history = useHistory();
+
+    const checkOutHandler = () => {
+         
+        history.push('/login?redirect=checkout')
+
+    }
 
     return (
         <>
@@ -61,11 +69,11 @@ const Cart = () => {
                 <h3>€{Number(totalPrice) + Number(taxPrice)}</h3>
             </div>
 
-            {cartItems.length !== 0 ? ( < Link to={userInfo ? '/checkout' : '/login'}>
-                <div className='button mt-3'>
+            {cartItems.length !== 0 ? 
+                <div className='button mt-3' onClick={() => checkOutHandler()}>
                         Checkout
                 </div>
-            </Link>) : null}
+             : null}
           
             </div>
             
