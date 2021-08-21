@@ -1,5 +1,4 @@
-import mongoose from 'mongoose'
-
+import mongoose from 'mongoose';
 
 const productSchema = mongoose.Schema(
  {
@@ -18,15 +17,25 @@ const productSchema = mongoose.Schema(
       },
     
     price: {
-      type: Number,
-      required: true,
+      currency: { type: String, required: true},
+      value: { type: Number, required: true },
+      discount: { type: Number, required: false },
       },
     
-    discountPrice: {
-      type: Number,
-      required: false,
-      },
+    description: { type: String, required: true },
     
+    size: {
+      type: Array, required: true
+    },
+    materials: {
+      type: String, required: true
+    },
+    quality: {
+      type: Array, required: true
+    },
+    productNumber: {
+      type: String, required: true
+    }
     },
     { timestamps: true }
   );

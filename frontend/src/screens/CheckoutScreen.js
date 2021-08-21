@@ -16,7 +16,7 @@ const CheckoutScreen = () => {
             <div className="p-5">
                 <div className='checkout-order'>
                         <div className="checkout-logo">
-                        <img src={logo} alt="Cos" />
+                            <img src={logo} alt="Cos" />
                         </div>
                         
                         <Router>

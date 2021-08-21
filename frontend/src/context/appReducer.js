@@ -7,7 +7,8 @@ export default (state, action) => {
                 loading:true
             }
 
-            case 'LIST_PRODUCTS':
+        case 'LIST_PRODUCTS':
+            
             return {
                 ...state,
                 loading:false,

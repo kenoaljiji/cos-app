@@ -13,7 +13,7 @@ const Cart = () => {
     }
 
     
-    const totalPrice = cartItems.reduce((acc, item) => acc + (item.discountPrice || item.price) * item.count, 0) 
+    const totalPrice = cartItems.reduce((acc, item) => acc + (item.price.discount || item.price.value) * item.count, 0) 
 
     const taxPrice =  addDecimals(Number((0.01 * totalPrice)))
 
@@ -41,7 +41,7 @@ const Cart = () => {
                 </div>
                 <div className="cart-items__details">
                         <h3>{item.name}</h3>
-                        <p>{formatCurrency(item.discountPrice ? item.discountPrice : item.price)} x {item.count}{" "}</p>
+                        <p>{formatCurrency(item.price.discount ? item.price.discount : item.price.value)} x {item.count}{" "}</p>
                         
                        
                 </div>

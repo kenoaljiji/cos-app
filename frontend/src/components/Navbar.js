@@ -49,8 +49,8 @@ const Navbar = () => {
                 </div>
                 <div className="nav-left">
                     <ul className="nav-left_items">
-                        <li><Link to='/women' className={location.pathname === '/women' ? 'active' : ''}> Women</Link></li>
-                        <li><Link to='/man' className={location.pathname === '/man' ? 'active' : ''} >Man</Link></li>
+                        <li><Link to='/category/women' className={location.pathname === '/category/women' ? 'active' : ''}> Women</Link></li>
+                        <li><Link to='/category/man' className={location.pathname === '/category/man' ? 'active' : ''} >Man</Link></li>
                         <li><Link to='/' className={location.pathname === '/' ? 'active' : ''} > Sale</Link></li>
                     </ul>
                 </div>
@@ -86,8 +86,8 @@ const Navbar = () => {
             <div className={isMobile ? 'nav-mobile show' : 'nav-mobile'}>
             
                     <ul className="nav-mobile_items">
-                        <li onClick={() => setIsMobile(!isMobile)}><Link to='/women' className={location.pathname === '/women' ? 'active' : ''}> Women</Link></li>
-                        <li onClick={() => setIsMobile(!isMobile)}><Link to='/man' className={location.pathname === '/man' ? 'active' : ''} >Man</Link></li>
+                        <li onClick={() => setIsMobile(!isMobile)}><Link to='/women' className={location.pathname === '/category/women' ? 'active' : ''}> Women</Link></li>
+                        <li onClick={() => setIsMobile(!isMobile)}><Link to='/man' className={location.pathname === '/category/man' ? 'active' : ''} >Man</Link></li>
                         <li onClick={() => setIsMobile(!isMobile)}><Link to='/' className={location.pathname === '/' ? 'active' : ''} > Sale</Link></li>
                         <li onClick={() => setIsMobile(!isMobile)}><Link to='/contact' className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
                         <li onClick={() => setIsMobile(!isMobile)} ><Link to='/login' className={location.pathname === '/login' ? 'active' : ''}> Sign In</Link></li>

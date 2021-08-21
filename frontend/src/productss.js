@@ -1,5 +1,5 @@
 
-const products = [
+const productss = [
 
      {
     name: 'RECYCLED POLYESTER PERFORMANCE PARKA',
@@ -11,7 +11,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xs', 's'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647001',
   },
@@ -23,9 +23,10 @@ const products = [
       currency: '€',
       value: 168,
     },
+    discountPrice: 99,
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xs', 's'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+     materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647001'
   },
@@ -39,7 +40,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton',
+     materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647001'
   },
@@ -53,7 +54,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body'],
     productNumber: '0930647021'
   },
@@ -65,11 +66,11 @@ const products = [
     price: {
       currency: '€',
       value: 135,
-      discount:99,
+      discountValue:99,
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647021'
     
@@ -84,7 +85,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647021'
   },
@@ -96,11 +97,11 @@ const products = [
     price: {
       currency: '€',
       value: 135,
-      discount: 99,
+      discountValue: 99,
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647021'
   },
@@ -112,11 +113,11 @@ const products = [
     price: {
       currency: '€',
       value: 145,
-      discount: 99,
+      discountValue: 99,
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647001'
   },
@@ -131,7 +132,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647011'
   },
@@ -146,7 +147,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647021'
   },
@@ -161,7 +162,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647051'
   },
@@ -175,7 +176,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647031'
     },
@@ -189,7 +190,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647022'
   },
@@ -203,7 +204,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647028'
   },
@@ -217,7 +218,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647026'
   },
@@ -231,7 +232,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder', 'Ribbed cuff'],
     productNumber: '0930647022'
   },
@@ -245,7 +246,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647021'
   },
@@ -259,7 +260,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647021'
   },
@@ -273,7 +274,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647048'
   },
@@ -287,7 +288,7 @@ const products = [
   },
   description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
   size: ['xl', 's', 'sm'],
-  materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+  materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
   quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
   productNumber: '0930647008'
   },
@@ -301,7 +302,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647006'
   },
@@ -315,7 +316,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647003'
   },
@@ -329,7 +330,7 @@ const products = [
     },
     description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
     size: ['xl', 's', 'sm'],
-    materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+    materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
     quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
     productNumber: '0930647016'
   },
@@ -343,7 +344,7 @@ const products = [
   },
   description: 'Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.',
   size: ['xl', 's', 'sm'],
-  materials:'32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable',
+  materials:['32% Polyamide','29% Viscose','23% Mulberry silk', '15% Organic cotton','1% Elastane / Machine washable'],
   quality:['Relaxed fit', 'Dropped shoulder','Elasticated body', 'Ribbed cuff'],
   productNumber: '0930647027'
   },
@@ -351,4 +352,4 @@ const products = [
 ]
 
 
-export default products
+export default productss
