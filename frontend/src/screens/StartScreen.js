@@ -13,23 +13,9 @@ import OverlayImage from '../components/OverlayImage';
 
 const StartScreen = () => {
 
-    const [data, setData] = useState([])
-
-    /* data = [
-        {
-        category:'',
-        title: "women",
-        info:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?"
-      }
-   
-    ] */
-
-
 
     return (
         <div className='category grid'>
-
             <div className="category-women" data-aos="fade-right">
                     <Link to='/category/women'>
                         <OverlayImage images={women}/>
@@ -46,10 +32,8 @@ const StartScreen = () => {
             
             <div className="category-man" data-aos="fade-left" >
 
-                <Link to='/category/man'>
-               
+                <Link to='/category/man'>  
                     <OverlayImage images={man}/>
-          
                 </Link>
                 
             </div>
