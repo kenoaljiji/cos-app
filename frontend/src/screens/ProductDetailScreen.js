@@ -65,11 +65,8 @@ const ProductDetailScreen = ({ match }) => {
                     <div className='mb-5'>
                             <p>{product.description}</p>
                             <ul className='mt-3'>
-                                    {product.quality.map(quality => (
-                                        <li>{`- ${quality}`}</li>
-                                    ))}
-                                
-                        </ul>
+                                    {product.quality.map(quality => <li>{`- ${quality}`}</li>)} 
+                            </ul>
                         <p className='mt-3 mb-2'>{product.materials}</p>
                         <p>Available sizes: {product.size.join(', ').toUpperCase()} </p>
                     </div>
@@ -79,13 +76,13 @@ const ProductDetailScreen = ({ match }) => {
                     </div>
 
                     <div>
-                                <p className='mb-2'>{product.materials}</p>
+                        <p className='mb-2'>{product.materials}</p>
                                 
-                                <p className='mb-2'>Make sure that your favourite items remain long-loved pieces for years to come; read our product care guide and explore our selection of carefully chosen care products.</p>
-                                
-                    <p>Product No:{product.productNumber}</p>
+                        <p className='mb-2'>Make sure that your favourite items remain long-loved pieces for years to come; read our product care guide and explore our selection of carefully chosen care products.</p>
+                            
+                        <p>Product No:{product.productNumber}</p>
 
-                            </div>
+                    </div>
                             
              </div>
                
@@ -97,7 +94,7 @@ const ProductDetailScreen = ({ match }) => {
                             
                     <Link to={`/product/${p._id}`} key={index} onClick={() => getProductDetails(p)}>
                         <div className='product mb-1' data-aos={p.animation}>
-                            <img src={p.images[0]} alt="" />
+                            <img src={p.images[0]} alt="picture" />
                        <p className='mt-2'>{p.name}</p>
                         <p className='mt-1'><span>{p.price.discount ? `€${p.price.discount}` : null} </span>
                                     <span style={p.price.discount ? { textDecoration: 'line-through' } : null}>{p.price.currency}{p.price.value}</span>

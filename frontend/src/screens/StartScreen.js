@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import women from '../images/sale-women.png';
 import shoeWomen from '../images/shoe-women.png';
@@ -6,11 +6,25 @@ import man from '../images/sale-man.png';
 import shoeMan from '../images/shoe-man.png';
 import manBig from '../images/man-big.png';
 import womenBig from '../images/women-big.png';
+import OverlayImage from '../components/OverlayImage';
 
 
 
 
 const StartScreen = () => {
+
+    const [data, setData] = useState([])
+
+    /* data = [
+        {
+        category:'',
+        title: "women",
+        info:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias molestias eius libero?"
+      }
+   
+    ] */
+
 
 
     return (
@@ -18,11 +32,7 @@ const StartScreen = () => {
 
             <div className="category-women" data-aos="fade-right">
                     <Link to='/category/women'>
-                    <div className='category-overlay'>
-
-                        <img src={women} alt="women" />
-
-                    </div>
+                        <OverlayImage images={women}/>
                     </Link>
             </div>
 
@@ -37,10 +47,9 @@ const StartScreen = () => {
             <div className="category-man" data-aos="fade-left" >
 
                 <Link to='/category/man'>
-                <div className='category-overlay'>
-                    <img src={man} alt=""/>
-                    
-                </div>
+               
+                    <OverlayImage images={man}/>
+          
                 </Link>
                 
             </div>
@@ -56,22 +65,13 @@ const StartScreen = () => {
             
             <div className="category-big-man">
                 <Link to='/category/man'>
-                    <div className='category-overlay'>
-
-                    <img src={manBig} alt="man big"/>
-
-                    </div>
+                    <OverlayImage images={manBig}/>
                 </Link>
             </div>
             
             <div className="category-big-women" >
                     <Link to='/category/women'>
-                    <div className='category-overlay'>
-
-                            <img src={womenBig} alt="women-big"/>
-
-
-                    </div>
+                        <OverlayImage images={womenBig}/>
                     </Link>
            </div>
         </div>

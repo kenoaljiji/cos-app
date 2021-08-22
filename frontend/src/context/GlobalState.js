@@ -213,8 +213,7 @@ export const GlobalProvider = ({ children }) => {
           addCartActive,
           userLogin,
           logout
-          
-    }}>
+      }}>
       {children}
     </GlobalContext.Provider>
   )

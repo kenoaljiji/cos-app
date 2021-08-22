@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalState';
 
 const paymentType = [
+
     {
         id:'PayPal',
         value: 'PayPal',
@@ -22,10 +23,12 @@ const paymentType = [
     {
         id: 'Klarna',
         value: 'Klarna',
-        img: '../images/Klarna.png' }
+        img: '../images/Klarna.png'
+    }
 ]
 
 const PaymentScreen = () => {
+
 
     const { addPaymentMethod } = useContext(GlobalContext);
     
@@ -39,7 +42,7 @@ const PaymentScreen = () => {
     }
     return (
         <div className='payment'>
-            <CheckoutSteps step1 step2 />
+            <CheckoutSteps step1 step2/>
             
             
             <h2>Payment provider </h2>
@@ -65,6 +68,7 @@ const PaymentScreen = () => {
                     > Continue to Confirm </button>    
             </form>
         </div>
+
     )
 }
 

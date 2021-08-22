@@ -27,8 +27,8 @@ const ProductsScreen = ({match}) => {
              {loading ? (<Spinner />) : (
                  <div className="grid">
                      
-                     {products.length !== 0 && data.map(product => (
-                         <Product product={product}/>
+                     {products.length !== 0 && data.map((product, index) => (
+                         <Product product={product} key={index}/>
                     ))}
             </div>
              )}
