@@ -26,7 +26,7 @@ function App() {
 
     return ( 
             <>
-               <CheckoutScreen/>
+                <Route exact path='/checkout' component={CheckoutScreen}/>
             </> )
         else 
         	 return (
@@ -35,14 +35,12 @@ function App() {
             <main>
               <Cart/>
                  <div className="container">
-
                     <Route exact path="/" component={StartScreen}/>
                     <Route path="/category/:name" component={ProductsScreen}/>
                     <Route path="/contact" component={ContactScreen} />
                     <Route path="/login" component={LoginScreen} />
                     <Route path="/product/:id" component={ProductDetailScreen}/>    
                  </div>
-                 
             </main>
           <Footer />
          </>

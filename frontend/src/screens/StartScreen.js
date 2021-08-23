@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import women from '../images/sale-women.png';
 import shoeWomen from '../images/shoe-women.png';

@@ -132,9 +132,7 @@ const ShippingScreen = () => {
                 className='button'
              >   Continue to payment
                 </button>    
-        
             </form>
-
         </div>
     )
 }
