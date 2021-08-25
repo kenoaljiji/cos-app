@@ -6,11 +6,13 @@
 
 ### Login info
 
-email: admin@cos.com,
+email: `admin@cos.com`,
 password: 123456
 
-email: ivan@cos.com,
+email: `ivan@cos.com`,
 password: 123456
 
-email: amir@cos.com,
+email: `amir@cos.com`,
 password: 123456
+
+
