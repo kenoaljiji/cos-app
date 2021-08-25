@@ -8,15 +8,10 @@ const Cart = () => {
 
     const { cartItems,removeItemFromCart,cartActive,userInfo } = useContext(GlobalContext)
     
-    const addDecimals = (num) => {
-        return (Math.round(num * 100) / 100).toFixed(2)
-    }
-
-    
     const totalPrice = cartItems.reduce((acc, item) => acc + (item.price.discount || item.price.value) * item.count, 0) 
-
-    const taxPrice =  addDecimals(Number((0.01 * totalPrice)))
-
+    
+    const taxPrice =  formatCurrency((0.01 * totalPrice))
+    
     const location = useLocation();
 
     const history = useHistory();
@@ -47,11 +42,8 @@ const Cart = () => {
                 </div>
                     {location.pathname !== '/checkout' ? (<p style={{cursor: 'pointer', fontWeight: '400'}} onClick={() => removeItemFromCart(item._id)}>x</p>) : null}
                 </div>
-                    
-              
             )
             )}
-            
             
             <div className='cart-total'>
                         <div className='cart-total__price'>
@@ -60,13 +52,12 @@ const Cart = () => {
                         </div>
                         <div className='cart-total__price mt-1'>
                             <p>Taxes</p>
-                            <span>{taxPrice}</span>
+                            <span>€{taxPrice}</span>
                         </div>
-    
             </div>
             <div className='cart-pay'>
-                            <h3>Total</h3>
-                <h3>€{Number(totalPrice) + Number(taxPrice)}</h3>
+                    <h3>Total</h3>
+                    <h3>€{totalPrice + taxPrice}</h3>
             </div>
 
             {cartItems.length !== 0 ? 
@@ -77,7 +68,7 @@ const Cart = () => {
           
             </div>
             
-              </>
+        </>
     )
 }
 

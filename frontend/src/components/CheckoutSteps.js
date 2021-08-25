@@ -6,8 +6,6 @@ const CheckoutSteps = ({ step1, step2, step3 }) => {
     
     return (
 
-        
-        
         <ul className='checkout-nav'>
             
                 <li className='checkout-nav__list'>
