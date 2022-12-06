@@ -2,11 +2,7 @@
 
 ### how to run app
 
-#### npm install
-
-#### npm run dev
-
-# Add on root .env file with variable
+### Add on root .env file with variable
 
 <ul>
     <li>NODE_ENV</li>
@@ -14,6 +10,10 @@
     <li>MONGO_URI</li>
     <li>JWT_SECRET</li>
 </ul>
+
+#### npm install
+
+#### npm run dev
 
 ### Login info
 
