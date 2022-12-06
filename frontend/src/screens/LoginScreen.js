@@ -24,7 +24,11 @@ const LoginScreen = ({ location, history }) => {
     }
   }, [history, userInfo, redirect]);
 
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -32,23 +36,36 @@ const LoginScreen = ({ location, history }) => {
     userLogin(data);
   };
 
+  const style = {
+    color: '#990000',
+    fontSize: '12px',
+    marginBottom: '20px',
+    marginLeft: '10px',
+  };
+
   return (
     <div className='py-5 text-center'>
       {loading ? <Spinner /> : null}
       <h2>Sing In</h2>
       <form className='form login' onSubmit={handleSubmit(onSubmit)}>
-        <input
-          type='email'
-          placeholder='Enter Email'
-          name='email'
-          {...register('email')}
-        />
-        <input
-          type='password'
-          placeholder='Enter Password'
-          name='password'
-          {...register('password')}
-        />
+        <div className='form_input'>
+          <input
+            type='email'
+            placeholder='Enter Email'
+            name='email'
+            {...register('email', { required: errors.email?.message })}
+          />
+          <p style={style}>{errors.email?.message}</p>
+        </div>
+        <div className='form_input'>
+          <input
+            type='password'
+            placeholder='Enter Password'
+            name='password'
+            {...register('password', { required: errors.password?.message })}
+          />
+          <p style={style}>{errors.password?.message}</p>
+        </div>
         <div>
           <input type='submit' value={'Login'} className='button' />
         </div>
