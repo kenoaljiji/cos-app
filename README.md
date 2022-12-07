@@ -11,14 +11,15 @@
     <li>JWT_SECRET</li>
 </ul>
 
-#### npm install
+#### npm install on root
 
-#### npm run dev
+#### navigate on frontend folder
+
+#### npm install on frontend
+
+#### npm run dev on root
 
 ### Login info
-
-email: `admin@cos.com`,
-password: 123456
 
 email: `ivan@cos.com`,
 password: 123456
